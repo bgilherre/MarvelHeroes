@@ -12,6 +12,7 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detalleLabel: UILabel!
     @IBOutlet weak var fotoImageView: UIImageView!
+    @IBOutlet weak var descripcionTextView: UITextView!
     
 
     func configureView() {
@@ -19,6 +20,9 @@ class DetailViewController: UIViewController {
         if let detail = detailItem {
             if let label = detalleLabel {
                 label.text = detail.nombre!.description
+            }
+            if let label = descripcionTextView {
+                label.text = detail.descripcion!.description
             }
         }
     }

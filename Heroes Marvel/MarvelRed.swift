@@ -39,7 +39,7 @@ public enum HashType {
 
 class MarvelRed: NSObject{
 
-    class func crearSesionRed() -> (NSMutableURLRequest, URLSession, String) {
+    class func crearSesionRed(url: String) -> (NSMutableURLRequest, URLSession, String) {
         
         let request: NSMutableURLRequest
         let session = URLSession.shared
@@ -47,27 +47,58 @@ class MarvelRed: NSObject{
         formatter.dateFormat = "dd-MM-yyyy"
         
         let tiempoIni = formatter.string(from: Date())
-        request = NSMutableURLRequest(url: URL(string: "")!)
+        
+        let APIKEY: String = "c0252ec5bc3ee9b2c6a0a26e2dfb306d"
+        let PRIVKEY: String = "c124cdc74823164742598e641674842fa2de600c"
+        
+        let ts = NSDate().timeIntervalSince1970.description
+        let hash = "\(ts)\(PRIVKEY)\(APIKEY)".md5()!
+        
+        print(ts)
+        print(APIKEY)
+        print(hash)
+        
+        let urlFinal: String = url + "?ts=" + ts + "&apikey="  + APIKEY + "&hash=" + hash
+        
+        request = NSMutableURLRequest(url: URL(string: urlFinal)!)
         
         return (request, session, tiempoIni)
     }
     
     class func llamadaPersonajes(){
         
-        let ts:Date = Date()
-        let APIKEY: String = "c0252ec5bc3ee9b2c6a0a26e2dfb306d"
-        let PRIVKEY: String = "c124cdc74823164742598e641674842fa2de600c"
+        var request: NSMutableURLRequest = NSMutableURLRequest()
+        var session: URLSession = URLSession()
+        var timeLoad: String
         
-        let hash: String = ts.description+APIKEY+PRIVKEY
+
         
-        if let md5 = hash.hashed(.md5) {
-            print("md5: \(md5)")
-        }
+        
+        (request,session,timeLoad) = crearSesionRed(url : "https://gateway.marvel.com/v1/public/characters")
+        
+        let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in
+            print(data)
+            //print(response)
+            //print(error)
+            do{
+                let result = NSString(data: data!, encoding: String.Encoding.ascii.rawValue)!
+                var cadData:String = (result as String)
+
+                let dataA : Data = cadData.data(using: String.Encoding.utf8)!
+
+                let dataB : NSDictionary = try JSONSerialization.jsonObject(with: dataA, options:JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
+                print(dataB)
+                
+                print(dataB.objects(forKeys: ["results"], notFoundMarker: self))
+            }catch{
+                print(error)
+            }
+        })
+        task.resume()
+
         
         //APIKEY.utf8.md
-        print(ts)
-        print(APIKEY)
-        print(hash)
+
     }
 
 //    class func MD5(string: String) -> Data {
@@ -83,32 +114,26 @@ class MarvelRed: NSObject{
 //        return digestData
 //    }
     
-    
-    class func hashed(_ type: HashType, output: HashOutputType = .hex) -> String? {
-        
-        // setup data variable to hold hashed value
-        var digest = Data(count: Int(type.length))
-        
-        // generate hash using specified hash type
-        _ = digest.withUnsafeMutableBytes { (digestBytes: UnsafeMutablePointer<UInt8>) in
-            self.withUnsafeBytes { (messageBytes: UnsafePointer<UInt8>) in
-                let length = CC_LONG(self.count)
-                switch type {
-                case .md5: CC_MD5(messageBytes, length, digestBytes)
-                case .sha1: CC_SHA1(messageBytes, length, digestBytes)
-                case .sha224: CC_SHA224(messageBytes, length, digestBytes)
-                case .sha256: CC_SHA256(messageBytes, length, digestBytes)
-                case .sha384: CC_SHA384(messageBytes, length, digestBytes)
-                case .sha512: CC_SHA512(messageBytes, length, digestBytes)
-                }
-            }
-        }
-        
-        // return the value based on the specified output type.
-        switch output {
-        case .hex: return digest.map { String(format: "%02hhx", $0) }.joined()
-        case .base64: return digest.base64EncodedString()
-        }
-    }
 
+
+}
+
+extension String {
+    func md5() -> String! {
+        let str = self.cString(using: String.Encoding.utf8)
+        let strLen = CUnsignedInt(self.lengthOfBytes(using: String.Encoding.utf8))
+        let digestLen = Int(CC_MD5_DIGEST_LENGTH)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
+        
+        CC_MD5(str!, strLen, result)
+        
+        var hash = NSMutableString()
+        for i in 0..<digestLen {
+            hash.appendFormat("%02x", result[i])
+        }
+        
+        //result.destroy()
+        
+        return String(format: hash as String)
+    }
 }

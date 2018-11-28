@@ -8,6 +8,7 @@
 
 import Foundation
 import CommonCrypto
+import CoreData
 
 public enum HashOutputType {
     // standard hex string output
@@ -87,9 +88,34 @@ class MarvelRed: NSObject{
                 let dataA : Data = cadData.data(using: String.Encoding.utf8)!
 
                 let dataB : NSDictionary = try JSONSerialization.jsonObject(with: dataA, options:JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
-                print(dataB)
+                //print(dataB)
                 
-                print(dataB.objects(forKeys: ["results"], notFoundMarker: self))
+                let datos:[NSDictionary]  = dataB.objects(forKeys: ["data"], notFoundMarker: self) as! [NSDictionary]
+                let resultados: [NSArray] = datos.first?.objects(forKeys: ["results"], notFoundMarker: self) as! [NSArray]
+                let store = CoreDataStack.store
+                //print(resultados)
+                let res = resultados[0]
+                for item in res{
+                    //print(item)
+                    print((item as AnyObject).value(forKey: "id")!)
+                    print((item as AnyObject).value(forKey: "name")!)
+                    print((item as AnyObject).value(forKey: "description")!)
+                    let heroeEntity = NSEntityDescription.entity(forEntityName: "Heroe", in: store.persistentContainer.viewContext)
+                    
+                    let heroe = NSManagedObject(entity: heroeEntity!,insertInto: store.persistentContainer.viewContext)
+                    if (item as AnyObject).value(forKey: "name") as! String != ""{
+                        heroe.setValue((item as AnyObject).value(forKey: "name")!, forKey: "nombre")
+                    }
+                    if (item as AnyObject).value(forKey: "description") as! String != ""{
+                        heroe.setValue((item as AnyObject).value(forKey: "description")!, forKey: "descripcion")
+                    }
+                    
+                    NSLog("Heroe creado")
+                    print("-------------------------------------------------")
+                }
+
+                store.saveContext()
+                
             }catch{
                 print(error)
             }

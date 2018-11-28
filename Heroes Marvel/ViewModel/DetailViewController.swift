@@ -18,7 +18,7 @@ class DetailViewController: UIViewController {
         // Update the user interface for the detail item.
         if let detail = detailItem {
             if let label = detalleLabel {
-                label.text = detail.timestamp!.description
+                label.text = detail.nombre!.description
             }
         }
     }
@@ -29,7 +29,7 @@ class DetailViewController: UIViewController {
         configureView()
     }
 
-    var detailItem: Event? {
+    var detailItem: Heroe? {
         didSet {
             // Update the view.
             configureView()

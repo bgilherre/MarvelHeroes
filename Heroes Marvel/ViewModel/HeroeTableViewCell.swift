@@ -10,6 +10,8 @@ import UIKit
 
 class HeroeTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var nombreLabel: UILabel!
+    @IBOutlet weak var fotoHeroeImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

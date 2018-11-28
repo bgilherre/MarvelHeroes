@@ -47,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC47763421AE8EFD00B571B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCADE4F121ADA70B002E4AA7 /* Main.storyboard */,
+				FCADE4F621ADA70F002E4AA7 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FCADE4DC21ADA70B002E4AA7 = {
 			isa = PBXGroup;
 			children = (
@@ -66,12 +75,11 @@
 		FCADE4E721ADA70B002E4AA7 /* Heroes Marvel */ = {
 			isa = PBXGroup;
 			children = (
+				FC47763421AE8EFD00B571B4 /* View */,
 				FCADE4FF21ADA7ED002E4AA7 /* Modelo */,
-				FCADE50421ADADBF002E4AA7 /* View */,
+				FCADE50421ADADBF002E4AA7 /* ViewModel */,
 				FCADE4E821ADA70B002E4AA7 /* AppDelegate.swift */,
-				FCADE4F121ADA70B002E4AA7 /* Main.storyboard */,
 				FCADE4F421ADA70F002E4AA7 /* Assets.xcassets */,
-				FCADE4F621ADA70F002E4AA7 /* LaunchScreen.storyboard */,
 				FCADE4F921ADA70F002E4AA7 /* Info.plist */,
 				FCADE4EA21ADA70B002E4AA7 /* Heroes_Marvel.xcdatamodeld */,
 				FCADE50221ADABEF002E4AA7 /* CoreDataStack.swift */,
@@ -88,14 +96,14 @@
 			path = Modelo;
 			sourceTree = "<group>";
 		};
-		FCADE50421ADADBF002E4AA7 /* View */ = {
+		FCADE50421ADADBF002E4AA7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				FCADE4ED21ADA70B002E4AA7 /* MasterViewController.swift */,
 				FCADE50021ADAA28002E4AA7 /* HeroeTableViewCell.swift */,
 				FCADE4EF21ADA70B002E4AA7 /* DetailViewController.swift */,
 			);
-			path = View;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -36,10 +36,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     @objc
     func insertNewObject(_ sender: Any) {
         let context = self.fetchedResultsController.managedObjectContext
-        let newEvent = Event(context: context)
+        let newHeroe = Heroe(context: context)
              
         // If appropriate, configure the new managed object.
-        newEvent.timestamp = Date()
+        newHeroe.nombre = ""
 
         // Save the context.
         do {
@@ -79,8 +79,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> HeroeTableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HeroeCell", for: indexPath) as! HeroeTableViewCell
-        let event = fetchedResultsController.object(at: indexPath)
-        configureCell(cell, withHeroe: Heroe)
+        let heroe = fetchedResultsController.object(at: indexPath)
+        configureCell(cell, withHeroe: heroe)
         return cell
     }
 
@@ -106,24 +106,24 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     func configureCell(_ cell: HeroeTableViewCell, withHeroe heroe: Heroe) {
-        cell.textLabel!.text = heroe.timestamp!.description
-        cell.
+        cell.textLabel!.text = heroe.nombre!.description
+        //cell.
     }
 
     // MARK: - Fetched results controller
 
-    var fetchedResultsController: NSFetchedResultsController<Event> {
+    var fetchedResultsController: NSFetchedResultsController<Heroe> {
         if _fetchedResultsController != nil {
             return _fetchedResultsController!
         }
         
-        let fetchRequest: NSFetchRequest<Event> = Event.fetchRequest()
+        let fetchRequest: NSFetchRequest<Heroe> = Heroe.fetchRequest()
         
         // Set the batch size to a suitable number.
         fetchRequest.fetchBatchSize = 20
         
         // Edit the sort key as appropriate.
-        let sortDescriptor = NSSortDescriptor(key: "timestamp", ascending: false)
+        let sortDescriptor = NSSortDescriptor(key: "nombre", ascending: false)
         
         fetchRequest.sortDescriptors = [sortDescriptor]
         
@@ -144,7 +144,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         return _fetchedResultsController!
     }    
-    var _fetchedResultsController: NSFetchedResultsController<Event>? = nil
+    var _fetchedResultsController: NSFetchedResultsController<Heroe>? = nil
 
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
@@ -168,9 +168,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             case .delete:
                 tableView.deleteRows(at: [indexPath!], with: .fade)
             case .update:
-                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! Event)
+                configureCell(tableView.cellForRow(at: indexPath!)! as! HeroeTableViewCell, withHeroe: anObject as! Heroe)
             case .move:
-                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! Event)
+                configureCell(tableView.cellForRow(at: indexPath!)! as! HeroeTableViewCell, withHeroe: anObject as! Heroe)
                 tableView.moveRow(at: indexPath!, to: newIndexPath!)
         }
     }

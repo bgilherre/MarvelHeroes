@@ -44,14 +44,25 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="okn-nl-pW5">
                                 <rect key="frame" x="16" y="79" width="343" height="265"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vYm-Zb-58G">
+                                <rect key="frame" x="24" y="360" width="335" height="287"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nKD-tQ-i5B" firstAttribute="bottom" secondItem="0XM-y9-sOw" secondAttribute="bottom" constant="315" id="4I8-7M-Uty"/>
                             <constraint firstItem="okn-nl-pW5" firstAttribute="trailing" secondItem="svH-Pt-448" secondAttribute="trailingMargin" id="6sW-4X-akw"/>
+                            <constraint firstItem="vYm-Zb-58G" firstAttribute="top" secondItem="0XM-y9-sOw" secondAttribute="bottom" constant="8" id="Aes-Ab-anB"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="nKD-tQ-i5B" secondAttribute="leading" constant="24" id="GuG-Jy-Nia"/>
+                            <constraint firstItem="nKD-tQ-i5B" firstAttribute="trailing" secondItem="vYm-Zb-58G" secondAttribute="trailing" constant="16" id="Mg3-S4-vDN"/>
                             <constraint firstItem="okn-nl-pW5" firstAttribute="top" secondItem="nKD-tQ-i5B" secondAttribute="top" constant="15" id="O9P-aK-s90"/>
+                            <constraint firstItem="nKD-tQ-i5B" firstAttribute="bottom" secondItem="vYm-Zb-58G" secondAttribute="bottom" constant="20" id="RQg-2M-xOV"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="top" secondItem="okn-nl-pW5" secondAttribute="bottom" constant="8" symbolic="YES" id="WLw-zb-S80"/>
+                            <constraint firstItem="vYm-Zb-58G" firstAttribute="leading" secondItem="nKD-tQ-i5B" secondAttribute="leading" constant="24" id="aGY-Iw-9SL"/>
                             <constraint firstItem="okn-nl-pW5" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="e4G-4s-YTW"/>
                             <constraint firstItem="okn-nl-pW5" firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" id="vTu-OD-Jyh"/>
                         </constraints>
@@ -60,6 +71,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
                     <connections>
+                        <outlet property="descripcionTextView" destination="vYm-Zb-58G" id="i5s-OX-XXg"/>
                         <outlet property="detalleLabel" destination="0XM-y9-sOw" id="HYk-UR-by1"/>
                         <outlet property="fotoImageView" destination="okn-nl-pW5" id="BMc-g6-gqt"/>
                     </connections>

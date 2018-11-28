@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FCADE4E921ADA70B002E4AA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCADE4E821ADA70B002E4AA7 /* AppDelegate.swift */; };
+		FCADE4EC21ADA70B002E4AA7 /* Heroes_Marvel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCADE4EA21ADA70B002E4AA7 /* Heroes_Marvel.xcdatamodeld */; };
+		FCADE4EE21ADA70B002E4AA7 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCADE4ED21ADA70B002E4AA7 /* MasterViewController.swift */; };
+		FCADE4F021ADA70B002E4AA7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCADE4EF21ADA70B002E4AA7 /* DetailViewController.swift */; };
+		FCADE4F321ADA70B002E4AA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCADE4F121ADA70B002E4AA7 /* Main.storyboard */; };
+		FCADE4F521ADA70F002E4AA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCADE4F421ADA70F002E4AA7 /* Assets.xcassets */; };
+		FCADE4F821ADA70F002E4AA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCADE4F621ADA70F002E4AA7 /* LaunchScreen.storyboard */; };
+		FCADE50121ADAA28002E4AA7 /* HeroeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCADE50021ADAA28002E4AA7 /* HeroeTableViewCell.swift */; };
+		FCADE50321ADABEF002E4AA7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCADE50221ADABEF002E4AA7 /* CoreDataStack.swift */; };
+		FCADE50721ADADF0002E4AA7 /* Heroe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCADE50521ADADF0002E4AA7 /* Heroe+CoreDataClass.swift */; };
+		FCADE50821ADADF0002E4AA7 /* Heroe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCADE50621ADADF0002E4AA7 /* Heroe+CoreDataProperties.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FCADE4E521ADA70B002E4AA7 /* Heroes Marvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Heroes Marvel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCADE4E821ADA70B002E4AA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FCADE4EB21ADA70B002E4AA7 /* Heroes_Marvel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Heroes_Marvel.xcdatamodel; sourceTree = "<group>"; };
+		FCADE4ED21ADA70B002E4AA7 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		FCADE4EF21ADA70B002E4AA7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FCADE4F221ADA70B002E4AA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FCADE4F421ADA70F002E4AA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCADE4F721ADA70F002E4AA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FCADE4F921ADA70F002E4AA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCADE50021ADAA28002E4AA7 /* HeroeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeTableViewCell.swift; sourceTree = "<group>"; };
+		FCADE50221ADABEF002E4AA7 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		FCADE50521ADADF0002E4AA7 /* Heroe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Heroe+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FCADE50621ADADF0002E4AA7 /* Heroe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Heroe+CoreDataProperties.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCADE4E221ADA70B002E4AA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FCADE4DC21ADA70B002E4AA7 = {
+			isa = PBXGroup;
+			children = (
+				FCADE4E721ADA70B002E4AA7 /* Heroes Marvel */,
+				FCADE4E621ADA70B002E4AA7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FCADE4E621ADA70B002E4AA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCADE4E521ADA70B002E4AA7 /* Heroes Marvel.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCADE4E721ADA70B002E4AA7 /* Heroes Marvel */ = {
+			isa = PBXGroup;
+			children = (
+				FCADE4FF21ADA7ED002E4AA7 /* Modelo */,
+				FCADE50421ADADBF002E4AA7 /* View */,
+				FCADE4E821ADA70B002E4AA7 /* AppDelegate.swift */,
+				FCADE4F121ADA70B002E4AA7 /* Main.storyboard */,
+				FCADE4F421ADA70F002E4AA7 /* Assets.xcassets */,
+				FCADE4F621ADA70F002E4AA7 /* LaunchScreen.storyboard */,
+				FCADE4F921ADA70F002E4AA7 /* Info.plist */,
+				FCADE4EA21ADA70B002E4AA7 /* Heroes_Marvel.xcdatamodeld */,
+				FCADE50221ADABEF002E4AA7 /* CoreDataStack.swift */,
+			);
+			path = "Heroes Marvel";
+			sourceTree = "<group>";
+		};
+		FCADE4FF21ADA7ED002E4AA7 /* Modelo */ = {
+			isa = PBXGroup;
+			children = (
+				FCADE50521ADADF0002E4AA7 /* Heroe+CoreDataClass.swift */,
+				FCADE50621ADADF0002E4AA7 /* Heroe+CoreDataProperties.swift */,
+			);
+			path = Modelo;
+			sourceTree = "<group>";
+		};
+		FCADE50421ADADBF002E4AA7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCADE4ED21ADA70B002E4AA7 /* MasterViewController.swift */,
+				FCADE50021ADAA28002E4AA7 /* HeroeTableViewCell.swift */,
+				FCADE4EF21ADA70B002E4AA7 /* DetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCADE4E421ADA70B002E4AA7 /* Heroes Marvel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCADE4FC21ADA70F002E4AA7 /* Build configuration list for PBXNativeTarget "Heroes Marvel" */;
+			buildPhases = (
+				FCADE4E121ADA70B002E4AA7 /* Sources */,
+				FCADE4E221ADA70B002E4AA7 /* Frameworks */,
+				FCADE4E321ADA70B002E4AA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Heroes Marvel";
+			productName = "Heroes Marvel";
+			productReference = FCADE4E521ADA70B002E4AA7 /* Heroes Marvel.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCADE4DD21ADA70B002E4AA7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Alsis GHE";
+				TargetAttributes = {
+					FCADE4E421ADA70B002E4AA7 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = FCADE4E021ADA70B002E4AA7 /* Build configuration list for PBXProject "Heroes Marvel" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCADE4DC21ADA70B002E4AA7;
+			productRefGroup = FCADE4E621ADA70B002E4AA7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCADE4E421ADA70B002E4AA7 /* Heroes Marvel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCADE4E321ADA70B002E4AA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCADE4F821ADA70F002E4AA7 /* LaunchScreen.storyboard in Resources */,
+				FCADE4F521ADA70F002E4AA7 /* Assets.xcassets in Resources */,
+				FCADE4F321ADA70B002E4AA7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCADE4E121ADA70B002E4AA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCADE4EC21ADA70B002E4AA7 /* Heroes_Marvel.xcdatamodeld in Sources */,
+				FCADE4E921ADA70B002E4AA7 /* AppDelegate.swift in Sources */,
+				FCADE50721ADADF0002E4AA7 /* Heroe+CoreDataClass.swift in Sources */,
+				FCADE4EE21ADA70B002E4AA7 /* MasterViewController.swift in Sources */,
+				FCADE50321ADABEF002E4AA7 /* CoreDataStack.swift in Sources */,
+				FCADE4F021ADA70B002E4AA7 /* DetailViewController.swift in Sources */,
+				FCADE50121ADAA28002E4AA7 /* HeroeTableViewCell.swift in Sources */,
+				FCADE50821ADADF0002E4AA7 /* Heroe+CoreDataProperties.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FCADE4F121ADA70B002E4AA7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCADE4F221ADA70B002E4AA7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FCADE4F621ADA70F002E4AA7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCADE4F721ADA70F002E4AA7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCADE4FA21ADA70F002E4AA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FCADE4FB21ADA70F002E4AA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FCADE4FD21ADA70F002E4AA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7AKBMT4K36;
+				INFOPLIST_FILE = "Heroes Marvel/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "bgil.proyectos.Heroes-Marvel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FCADE4FE21ADA70F002E4AA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7AKBMT4K36;
+				INFOPLIST_FILE = "Heroes Marvel/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "bgil.proyectos.Heroes-Marvel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCADE4E021ADA70B002E4AA7 /* Build configuration list for PBXProject "Heroes Marvel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCADE4FA21ADA70F002E4AA7 /* Debug */,
+				FCADE4FB21ADA70F002E4AA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCADE4FC21ADA70F002E4AA7 /* Build configuration list for PBXNativeTarget "Heroes Marvel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCADE4FD21ADA70F002E4AA7 /* Debug */,
+				FCADE4FE21ADA70F002E4AA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FCADE4EA21ADA70B002E4AA7 /* Heroes_Marvel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FCADE4EB21ADA70B002E4AA7 /* Heroes_Marvel.xcdatamodel */,
+			);
+			currentVersion = FCADE4EB21ADA70B002E4AA7 /* Heroes_Marvel.xcdatamodel */;
+			path = Heroes_Marvel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FCADE4DD21ADA70B002E4AA7 /* Project object */;
+}

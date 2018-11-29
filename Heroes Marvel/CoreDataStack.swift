@@ -19,7 +19,7 @@ class CoreDataStack{
     // MARK: - Core Data stack
     
     lazy var applicationDocumentsDirectory: URL = {
-        // The directory the application uses to store the Core Data store file. This code uses a directory named "alsis.proyectos.AGHEComerciales" in the application's documents Application Support directory.
+
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return urls[urls.count-1]
     }()
@@ -30,13 +30,11 @@ class CoreDataStack{
         return NSManagedObjectModel(contentsOf: modelURL)!
     }()
     
-    //lazy var managedObjectModel: NSManagedObjectModel = store.managedObjectModel
-    
     lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
         // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let url = self.applicationDocumentsDirectory.appendingPathComponent("Heroes.sqlite")
+        let url = self.applicationDocumentsDirectory.appendingPathComponent("Heroes_Marvel.sqlite")
         var failureReason = "There was an error creating or loading the application's saved data."
         do {
             let options = [ NSMigratePersistentStoresAutomaticallyOption : true, NSInferMappingModelAutomaticallyOption : true ]
@@ -57,9 +55,7 @@ class CoreDataStack{
         
         return coordinator
     }()
-    
-    //lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = store.persistentStoreCoordinator
-    
+  
     
     lazy var managedObjectContext: NSManagedObjectContext = {
         // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
@@ -68,9 +64,7 @@ class CoreDataStack{
         managedObjectContext.persistentStoreCoordinator = coordinator
         return managedObjectContext
     }()
-    
-    
-    //lazy var managedObjectContext: NSManagedObjectContext = store.managedObjectContext
+
     // MARK: - Core Data Saving support
     
     func saveContext () {

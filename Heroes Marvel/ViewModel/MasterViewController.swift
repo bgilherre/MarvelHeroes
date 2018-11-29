@@ -20,8 +20,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         // Do any additional setup after loading the view, typically from a nib.
         navigationItem.leftBarButtonItem = editButtonItem
 
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
-        navigationItem.rightBarButtonItem = addButton
         if let split = splitViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
@@ -31,37 +29,28 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func viewWillAppear(_ animated: Bool) {
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
+        DispatchQueue.global().async {
+            
+        
+            self.cargarHeroes()
+        }
+    }
+    
+    func cargarHeroes(){
         if !UserDefaults.standard.bool(forKey: "carga"){
-            let limit = 50
+            let limit = 25
             var offset = 0
             var continuar:Bool =  true
-            //while continuar{
+            while continuar && offset < 200{
                 print("entro")
+           
                 continuar = MarvelRed.llamadaPersonajes(limit: String(limit), offset: String(offset))
+
                 offset = offset + limit
-            //}
+            }
             UserDefaults.standard.setValue(true, forKey: "carga")
         }
     }
-
-    @objc
-    func insertNewObject(_ sender: Any) {
-        let context = self.fetchedResultsController.managedObjectContext
-        let newHeroe = Heroe(context: context)
-             
-        // If appropriate, configure the new managed object.
-        newHeroe.nombre = ""
-
-        // Save the context.
-        do {
-            try context.save()
-        } catch {
-
-            let nserror = error as NSError
-            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-        }
-    }
-
     // MARK: - Segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -70,8 +59,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             let object = fetchedResultsController.object(at: indexPath)
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = object
-                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-                controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
     }
@@ -117,11 +104,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     func configureCell(_ cell: HeroeTableViewCell, withHeroe heroe: Heroe) {
         if heroe.nombre != nil && heroe.nombre != ""{
-            //cell.textLabel!.text = heroe.nombre!.description
             cell.nombreLabel.text = heroe.nombre!.description
         }
         if heroe.imagen != nil{
-            cell.imageView?.image = UIImage(data: heroe.imagen! as Data)
+            cell.fotoHeroeImageView?.image = UIImage(data: heroe.imagen! as Data)
         }
        
     }
@@ -139,7 +125,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         fetchRequest.fetchBatchSize = 20
         
         // Edit the sort key as appropriate.
-        let sortDescriptor = NSSortDescriptor(key: "nombre", ascending: false)
+        let sortDescriptor = NSSortDescriptor(key: "nombre", ascending: true)
         
         fetchRequest.sortDescriptors = [sortDescriptor]
         

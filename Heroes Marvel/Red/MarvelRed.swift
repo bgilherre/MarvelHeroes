@@ -75,14 +75,14 @@ class MarvelRed: NSObject{
             semaforo.leave()
         })
         task.resume()
-        semaforo.resume()
+        semaforo.wait()
         return retorno
 
     }
 
     class func crearPersonajes(datos: [NSArray]){
         
-        let store = CoreDataStack.store
+        //let store = CoreDataStack.store
         let res = datos[0]
         for item in res{
             
@@ -95,7 +95,7 @@ class MarvelRed: NSObject{
             
             crearHeroe(nombre: nombre, descripcion: descripcion, imagen: rutaCompleta)
         }
-        store.saveContext()
+        //store.saveContext()
 
     }
 
@@ -120,7 +120,7 @@ class MarvelRed: NSObject{
                 
             }
         }
-
+        store.saveContext()
         NSLog("Heroe creado")
     }
 }

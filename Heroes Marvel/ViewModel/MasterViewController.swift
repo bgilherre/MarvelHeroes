@@ -32,7 +32,14 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
         if !UserDefaults.standard.bool(forKey: "carga"){
-            MarvelRed.llamadaPersonajes()
+            let limit = 50
+            var offset = 0
+            var continuar:Bool =  true
+            //while continuar{
+                print("entro")
+                continuar = MarvelRed.llamadaPersonajes(limit: String(limit), offset: String(offset))
+                offset = offset + limit
+            //}
             UserDefaults.standard.setValue(true, forKey: "carga")
         }
     }
@@ -156,15 +163,21 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     var _fetchedResultsController: NSFetchedResultsController<Heroe>? = nil
 
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        tableView.beginUpdates()
+        DispatchQueue.main.async {
+            self.tableView.beginUpdates()
+        }
     }
 
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
         switch type {
             case .insert:
-                tableView.insertSections(IndexSet(integer: sectionIndex), with: .fade)
+                DispatchQueue.main.async {
+                    self.tableView.insertSections(IndexSet(integer: sectionIndex), with: .fade)
+                }
             case .delete:
-                tableView.deleteSections(IndexSet(integer: sectionIndex), with: .fade)
+                DispatchQueue.main.async {
+                    self.tableView.deleteSections(IndexSet(integer: sectionIndex), with: .fade)
+                }
             default:
                 return
         }
@@ -173,10 +186,15 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {
             case .insert:
-                tableView.insertRows(at: [newIndexPath!], with: .fade)
+                DispatchQueue.main.async {
+                    self.tableView.insertRows(at: [newIndexPath!], with: .fade)
+                }
             case .delete:
-                tableView.deleteRows(at: [indexPath!], with: .fade)
+                DispatchQueue.main.async {
+                    self.tableView.deleteRows(at: [indexPath!], with: .fade)
+                }
             case .update:
+                
                 configureCell(tableView.cellForRow(at: indexPath!)! as! HeroeTableViewCell, withHeroe: anObject as! Heroe)
             case .move:
                 configureCell(tableView.cellForRow(at: indexPath!)! as! HeroeTableViewCell, withHeroe: anObject as! Heroe)
@@ -185,7 +203,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        tableView.endUpdates()
+        DispatchQueue.main.async {
+            self.tableView.endUpdates()
+        }
     }
 
 

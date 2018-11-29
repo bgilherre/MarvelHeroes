@@ -109,27 +109,29 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtA-pE-tcl">
-                                            <rect key="frame" x="16" y="20" width="249" height="50"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtA-pE-tcl">
+                                            <rect key="frame" x="16" y="20" width="249" height="49.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="49.5" id="WCO-c9-zBI"/>
+                                                <constraint firstAttribute="width" constant="249" id="v6y-5E-fdq"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                            <color key="textColor" red="0.14783379460000001" green="0.12081760330000001" blue="0.9094688756" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mC1-CK-JEE">
-                                            <rect key="frame" x="273" y="0.0" width="102" height="90"/>
+                                            <rect key="frame" x="273" y="-0.5" width="90" height="90.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="102" id="twG-lk-9b8"/>
+                                                <constraint firstAttribute="width" constant="90" id="3tW-fZ-Yxz"/>
+                                                <constraint firstAttribute="height" constant="90" id="gUL-IV-oDp"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="PtA-pE-tcl" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="topMargin" constant="9" id="Alf-Gn-bdO"/>
-                                        <constraint firstAttribute="trailing" secondItem="mC1-CK-JEE" secondAttribute="trailing" id="IKE-CC-7np"/>
-                                        <constraint firstItem="PtA-pE-tcl" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leadingMargin" id="RXa-eS-axT"/>
-                                        <constraint firstItem="PtA-pE-tcl" firstAttribute="centerY" secondItem="37f-cq-3Eg" secondAttribute="centerY" id="VY4-8e-LSo"/>
-                                        <constraint firstItem="mC1-CK-JEE" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="top" id="XKb-yz-rIV"/>
-                                        <constraint firstItem="mC1-CK-JEE" firstAttribute="leading" secondItem="PtA-pE-tcl" secondAttribute="trailing" constant="8" symbolic="YES" id="azF-EW-EnP"/>
-                                        <constraint firstItem="PtA-pE-tcl" firstAttribute="centerY" secondItem="mC1-CK-JEE" secondAttribute="centerY" id="dgd-G5-gCf"/>
+                                        <constraint firstItem="PtA-pE-tcl" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="topMargin" constant="9" id="Trd-me-6NJ"/>
+                                        <constraint firstItem="mC1-CK-JEE" firstAttribute="leading" secondItem="PtA-pE-tcl" secondAttribute="trailing" constant="8" id="dHD-sn-gUU"/>
+                                        <constraint firstItem="mC1-CK-JEE" firstAttribute="centerY" secondItem="PtA-pE-tcl" secondAttribute="centerY" id="iCv-Ol-CGb"/>
+                                        <constraint firstItem="PtA-pE-tcl" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leadingMargin" id="zik-5D-RFi"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

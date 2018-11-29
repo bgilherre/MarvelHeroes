@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC45709F21B0010100BB9AA2 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC45709E21B0010100BB9AA2 /* StringExtension.swift */; };
 		FC47763621AE9D8100B571B4 /* MarvelRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC47763521AE9D8100B571B4 /* MarvelRed.swift */; };
 		FCADE4E921ADA70B002E4AA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCADE4E821ADA70B002E4AA7 /* AppDelegate.swift */; };
 		FCADE4EC21ADA70B002E4AA7 /* Heroes_Marvel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCADE4EA21ADA70B002E4AA7 /* Heroes_Marvel.xcdatamodeld */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC45709E21B0010100BB9AA2 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		FC47763521AE9D8100B571B4 /* MarvelRed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelRed.swift; sourceTree = "<group>"; };
 		FCADE4E521ADA70B002E4AA7 /* Heroes Marvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Heroes Marvel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCADE4E821ADA70B002E4AA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC4570A021B001D300BB9AA2 /* ModeloDatos */ = {
+			isa = PBXGroup;
+			children = (
+				FCADE4EA21ADA70B002E4AA7 /* Heroes_Marvel.xcdatamodeld */,
+			);
+			path = ModeloDatos;
+			sourceTree = "<group>";
+		};
+		FC4570A121B0027800BB9AA2 /* Red */ = {
+			isa = PBXGroup;
+			children = (
+				FC47763521AE9D8100B571B4 /* MarvelRed.swift */,
+			);
+			path = Red;
+			sourceTree = "<group>";
+		};
+		FC4570A221B0028C00BB9AA2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FC45709E21B0010100BB9AA2 /* StringExtension.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		FC47763421AE8EFD00B571B4 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,15 +103,16 @@
 		FCADE4E721ADA70B002E4AA7 /* Heroes Marvel */ = {
 			isa = PBXGroup;
 			children = (
+				FC4570A221B0028C00BB9AA2 /* Util */,
+				FC4570A121B0027800BB9AA2 /* Red */,
+				FC4570A021B001D300BB9AA2 /* ModeloDatos */,
 				FC47763421AE8EFD00B571B4 /* View */,
 				FCADE4FF21ADA7ED002E4AA7 /* Modelo */,
 				FCADE50421ADADBF002E4AA7 /* ViewModel */,
 				FCADE4E821ADA70B002E4AA7 /* AppDelegate.swift */,
 				FCADE4F421ADA70F002E4AA7 /* Assets.xcassets */,
 				FCADE4F921ADA70F002E4AA7 /* Info.plist */,
-				FCADE4EA21ADA70B002E4AA7 /* Heroes_Marvel.xcdatamodeld */,
 				FCADE50221ADABEF002E4AA7 /* CoreDataStack.swift */,
-				FC47763521AE9D8100B571B4 /* MarvelRed.swift */,
 			);
 			path = "Heroes Marvel";
 			sourceTree = "<group>";
@@ -182,6 +209,7 @@
 			files = (
 				FCADE4EC21ADA70B002E4AA7 /* Heroes_Marvel.xcdatamodeld in Sources */,
 				FCADE4E921ADA70B002E4AA7 /* AppDelegate.swift in Sources */,
+				FC45709F21B0010100BB9AA2 /* StringExtension.swift in Sources */,
 				FCADE50721ADADF0002E4AA7 /* Heroe+CoreDataClass.swift in Sources */,
 				FC47763621AE9D8100B571B4 /* MarvelRed.swift in Sources */,
 				FCADE4EE21ADA70B002E4AA7 /* MasterViewController.swift in Sources */,

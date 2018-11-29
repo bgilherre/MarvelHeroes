@@ -41,7 +41,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             let limit = 25
             var offset = 0
             var continuar:Bool =  true
-            while continuar && offset < 200{
+            while continuar && offset < 300{
                 print("entro")
            
                 continuar = MarvelRed.llamadaPersonajes(limit: String(limit), offset: String(offset))

@@ -45,6 +45,12 @@ class CoreDataStack{
         return container
     }()
     
+    lazy var managedObjectModel: NSManagedObjectModel = {
+        // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
+        let modelURL = Bundle.main.url(forResource: "Heroes_Marvel", withExtension: "momd")!
+        return NSManagedObjectModel(contentsOf: modelURL)!
+    }()
+    
     // MARK: - Core Data Saving support
     
     func saveContext () {

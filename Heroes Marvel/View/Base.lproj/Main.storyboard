@@ -47,7 +47,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vYm-Zb-58G">
                                 <rect key="frame" x="24" y="360" width="335" height="287"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -108,36 +107,36 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mC1-CK-JEE">
-                                            <rect key="frame" x="273" y="0.0" width="102" height="89.5"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="102" id="uiD-I8-7YL"/>
-                                            </constraints>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtA-pE-tcl">
-                                            <rect key="frame" x="16" y="19.5" width="237" height="50.5"/>
+                                            <rect key="frame" x="16" y="20" width="249" height="50"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mC1-CK-JEE">
+                                            <rect key="frame" x="273" y="0.0" width="102" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="102" id="twG-lk-9b8"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="mC1-CK-JEE" firstAttribute="leading" secondItem="PtA-pE-tcl" secondAttribute="trailing" constant="20" id="16M-dH-723"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="PtA-pE-tcl" secondAttribute="bottom" constant="9" id="Cfa-ia-faq"/>
-                                        <constraint firstItem="PtA-pE-tcl" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leadingMargin" id="RKy-xY-hPU"/>
-                                        <constraint firstItem="PtA-pE-tcl" firstAttribute="centerY" secondItem="37f-cq-3Eg" secondAttribute="centerY" id="W3z-Qh-o9z"/>
-                                        <constraint firstAttribute="trailing" secondItem="mC1-CK-JEE" secondAttribute="trailing" id="Wuw-Rg-cll"/>
-                                        <constraint firstItem="PtA-pE-tcl" firstAttribute="centerY" secondItem="mC1-CK-JEE" secondAttribute="centerY" id="Ybk-UT-P1N"/>
-                                        <constraint firstItem="mC1-CK-JEE" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="top" id="n2p-W6-yuD"/>
+                                        <constraint firstItem="PtA-pE-tcl" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="topMargin" constant="9" id="Alf-Gn-bdO"/>
+                                        <constraint firstAttribute="trailing" secondItem="mC1-CK-JEE" secondAttribute="trailing" id="IKE-CC-7np"/>
+                                        <constraint firstItem="PtA-pE-tcl" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leadingMargin" id="RXa-eS-axT"/>
+                                        <constraint firstItem="PtA-pE-tcl" firstAttribute="centerY" secondItem="37f-cq-3Eg" secondAttribute="centerY" id="VY4-8e-LSo"/>
+                                        <constraint firstItem="mC1-CK-JEE" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="top" id="XKb-yz-rIV"/>
+                                        <constraint firstItem="mC1-CK-JEE" firstAttribute="leading" secondItem="PtA-pE-tcl" secondAttribute="trailing" constant="8" symbolic="YES" id="azF-EW-EnP"/>
+                                        <constraint firstItem="PtA-pE-tcl" firstAttribute="centerY" secondItem="mC1-CK-JEE" secondAttribute="centerY" id="dgd-G5-gCf"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="fotoHeroeImageView" destination="mC1-CK-JEE" id="4tM-03-xfX"/>
                                     <outlet property="nombreLabel" destination="PtA-pE-tcl" id="ItM-g6-8Wt"/>
-                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
+                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="detalleHeroe" id="6S0-TO-JiA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -147,7 +146,7 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="Heroes" id="Zdf-7t-Un8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>

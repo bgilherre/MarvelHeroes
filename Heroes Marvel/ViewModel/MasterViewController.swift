@@ -31,7 +31,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func viewWillAppear(_ animated: Bool) {
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
-        MarvelRed.llamadaPersonajes()
+        if !UserDefaults.standard.bool(forKey: "carga"){
+            MarvelRed.llamadaPersonajes()
+            UserDefaults.standard.setValue(true, forKey: "carga")
+        }
     }
 
     @objc
@@ -46,8 +49,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         do {
             try context.save()
         } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+
             let nserror = error as NSError
             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
@@ -56,7 +58,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     // MARK: - Segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
+        if segue.identifier == "detalleHeroe" {
             if let indexPath = tableView.indexPathForSelectedRow {
             let object = fetchedResultsController.object(at: indexPath)
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
@@ -107,8 +109,14 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     func configureCell(_ cell: HeroeTableViewCell, withHeroe heroe: Heroe) {
-        cell.textLabel!.text = heroe.nombre!.description
-        //cell.
+        if heroe.nombre != nil && heroe.nombre != ""{
+            //cell.textLabel!.text = heroe.nombre!.description
+            cell.nombreLabel.text = heroe.nombre!.description
+        }
+        if heroe.imagen != nil{
+            cell.imageView?.image = UIImage(data: heroe.imagen! as Data)
+        }
+       
     }
 
     // MARK: - Fetched results controller
@@ -180,14 +188,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         tableView.endUpdates()
     }
 
-    /*
-     // Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed.
-     
-     func controllerDidChangeContent(controller: NSFetchedResultsController) {
-         // In the simplest, most efficient, case, reload the table view.
-         tableView.reloadData()
-     }
-     */
+
 
 }
-

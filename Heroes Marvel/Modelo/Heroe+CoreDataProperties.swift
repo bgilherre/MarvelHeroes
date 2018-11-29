@@ -2,7 +2,7 @@
 //  Heroe+CoreDataProperties.swift
 //  Heroes Marvel
 //
-//  Created by Borja Gil Herrero on 27/11/2018.
+//  Created by Borja Gil Herrero on 29/11/2018.
 //  Copyright © 2018 Alsis GHE. All rights reserved.
 //
 //
@@ -17,8 +17,9 @@ extension Heroe {
         return NSFetchRequest<Heroe>(entityName: "Heroe")
     }
 
-    @NSManaged public var nombre: String?
     @NSManaged public var descripcion: String?
     @NSManaged public var imagen: NSData?
+    @NSManaged public var nombre: String?
+    @NSManaged public var miniatura: NSData?
 
 }

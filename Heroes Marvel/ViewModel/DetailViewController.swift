@@ -19,10 +19,20 @@ class DetailViewController: UIViewController {
         // Update the user interface for the detail item.
         if let detail = detailItem {
             if let label = detalleLabel {
-                label.text = detail.nombre!.description
+                if detail.nombre != ""{
+                    label.text = detail.nombre!.description
+                    self.navigationItem.title = detail.nombre!.description
+                }
             }
-            if let label = descripcionTextView {
-                label.text = detail.descripcion!.description
+            if let textView = descripcionTextView {
+                if detail.descripcion != nil && detail.descripcion != ""{
+                    textView.text = detail.descripcion!.description
+                }
+            }
+            if let image = fotoImageView{
+                if detail.imagen != nil{
+                    image.image = UIImage(data: detail.imagen! as Data)
+                }
             }
         }
     }

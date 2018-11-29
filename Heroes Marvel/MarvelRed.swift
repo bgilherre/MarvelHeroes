@@ -9,6 +9,7 @@
 import Foundation
 import CommonCrypto
 import CoreData
+import UIKit
 
 public enum HashOutputType {
     // standard hex string output
@@ -39,7 +40,7 @@ public enum HashType {
 }
 
 class MarvelRed: NSObject{
-
+    //Funcion que nos genera una sesion de red a partir de una url a la que conectarse
     class func crearSesionRed(url: String) -> (NSMutableURLRequest, URLSession, String) {
         
         let request: NSMutableURLRequest
@@ -54,10 +55,7 @@ class MarvelRed: NSObject{
         
         let ts = NSDate().timeIntervalSince1970.description
         let hash = "\(ts)\(PRIVKEY)\(APIKEY)".md5()!
-        
-        print(ts)
-        print(APIKEY)
-        print(hash)
+
         
         let urlFinal: String = url + "?ts=" + ts + "&apikey="  + APIKEY + "&hash=" + hash
         
@@ -70,17 +68,13 @@ class MarvelRed: NSObject{
         
         var request: NSMutableURLRequest = NSMutableURLRequest()
         var session: URLSession = URLSession()
-        var timeLoad: String
-        
-
-        
+        var timeLoad: String        
         
         (request,session,timeLoad) = crearSesionRed(url : "https://gateway.marvel.com/v1/public/characters")
         
         let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in
             print(data)
-            //print(response)
-            //print(error)
+
             do{
                 let result = NSString(data: data!, encoding: String.Encoding.ascii.rawValue)!
                 var cadData:String = (result as String)
@@ -93,13 +87,18 @@ class MarvelRed: NSObject{
                 let datos:[NSDictionary]  = dataB.objects(forKeys: ["data"], notFoundMarker: self) as! [NSDictionary]
                 let resultados: [NSArray] = datos.first?.objects(forKeys: ["results"], notFoundMarker: self) as! [NSArray]
                 let store = CoreDataStack.store
-                //print(resultados)
                 let res = resultados[0]
                 for item in res{
                     //print(item)
                     print((item as AnyObject).value(forKey: "id")!)
                     print((item as AnyObject).value(forKey: "name")!)
                     print((item as AnyObject).value(forKey: "description")!)
+                    //print((item as AnyObject).value(forKey: "thumbnail")!)
+                    let thumbnail = (item as AnyObject).value(forKey: "thumbnail")
+                    let rutaImagen: String = (thumbnail as AnyObject).value(forKey: "path") as! String
+                    let extensionImagen: String = (thumbnail as AnyObject).value(forKey: "extension") as! String
+                    let rutaCompleta: String = rutaImagen + "." + extensionImagen
+                    
                     let heroeEntity = NSEntityDescription.entity(forEntityName: "Heroe", in: store.persistentContainer.viewContext)
                     
                     let heroe = NSManagedObject(entity: heroeEntity!,insertInto: store.persistentContainer.viewContext)
@@ -108,6 +107,16 @@ class MarvelRed: NSObject{
                     }
                     if (item as AnyObject).value(forKey: "description") as! String != ""{
                         heroe.setValue((item as AnyObject).value(forKey: "description")!, forKey: "descripcion")
+                    }
+                    if rutaCompleta != ""{
+                        let url:NSURL = NSURL(string: rutaCompleta)!
+                        let data:NSData = try NSData(contentsOf: url as URL)
+                        
+                        let _: UIImage = UIImage.init(data: data as Data)!
+                        print(rutaCompleta)
+                        
+                        heroe.setValue(data, forKey: "imagen")
+
                     }
                     
                     NSLog("Heroe creado")
@@ -122,29 +131,16 @@ class MarvelRed: NSObject{
         })
         task.resume()
 
-        
-        //APIKEY.utf8.md
 
     }
 
-//    class func MD5(string: String) -> Data {
-//        let messageData = string.data(using:.utf8)!
-//        var digestData = Data(count: Int(CC_MD5_DIGEST_LENGTH))
-//
-//        _ = digestData.withUnsafeMutableBytes {digestBytes in
-//            messageData.withUnsafeBytes {messageBytes in
-//                CC_MD5(messageBytes, CC_LONG(messageData.count), digestBytes)
-//            }
-//        }
-//
-//        return digestData
-//    }
-    
+ 
 
 
 }
 
 extension String {
+    //Funcion para obtener un hash md5 a partir de una cadena de texto
     func md5() -> String! {
         let str = self.cString(using: String.Encoding.utf8)
         let strLen = CUnsignedInt(self.lengthOfBytes(using: String.Encoding.utf8))
@@ -153,12 +149,10 @@ extension String {
         
         CC_MD5(str!, strLen, result)
         
-        var hash = NSMutableString()
+        let hash = NSMutableString()
         for i in 0..<digestLen {
             hash.appendFormat("%02x", result[i])
         }
-        
-        //result.destroy()
         
         return String(format: hash as String)
     }

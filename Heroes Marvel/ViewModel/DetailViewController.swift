@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
     
 
     func configureView() {
-        // Update the user interface for the detail item.
+        // Actualizamos la interfaz
         if let detail = detailItem {
             if let label = detalleLabel {
                 if detail.nombre != ""{

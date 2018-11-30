@@ -68,7 +68,7 @@
                         <viewLayoutGuide key="safeArea" id="nKD-tQ-i5B"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
+                    <navigationItem key="navigationItem" title="Detalle Heroe" id="mOI-FS-AaM"/>
                     <connections>
                         <outlet property="descripcionTextView" destination="vYm-Zb-58G" id="i5s-OX-XXg"/>
                         <outlet property="detalleLabel" destination="0XM-y9-sOw" id="HYk-UR-by1"/>

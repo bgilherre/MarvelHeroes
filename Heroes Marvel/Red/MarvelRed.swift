@@ -53,18 +53,22 @@ class MarvelRed: NSObject{
                 let cadData:String = (result as String)
 
                 let dataA : Data = cadData.data(using: String.Encoding.utf8)!
-
+                //Transformamos la informacion a un diccionario
+                //MARK: - TODO Controlar el codigo que nos devuelve para que en caso de que de no devolver un 200 controlemos el error
                 let dataB : NSDictionary = try JSONSerialization.jsonObject(with: dataA, options:JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
-                //print(dataB)
-                
+                //Recorremos la informacion que nos devuelve la API de Marvel para llegar a la información
                 let datos:[NSDictionary]  = dataB.objects(forKeys: ["data"], notFoundMarker: self) as! [NSDictionary]
         
                 let resultados: [NSArray] = datos.first!.objects(forKeys: ["results"], notFoundMarker: self) as! [NSArray]
                 
                 if resultados.count != 0{
-                    crearPersonajes(datos: resultados)
-                    retorno =  true
-                    print("entro2 :" + String(retorno))
+                    if resultados[0].count != 0{
+                        crearPersonajes(datos: resultados[0])
+                        retorno =  true
+                        print("entro2 :" + String(retorno))
+                    }else{
+                        retorno = false
+                    }
                 }else{
                     retorno = false
                 }
@@ -80,11 +84,9 @@ class MarvelRed: NSObject{
 
     }
 
-    class func crearPersonajes(datos: [NSArray]){
-        
-        //let store = CoreDataStack.store
-        let res = datos[0]
-        for item in res{
+    class func crearPersonajes(datos: NSArray){
+
+        for item in datos{
             
             let nombre: String = (item as AnyObject).value(forKey: "name") as! String
             let descripcion : String = (item as AnyObject).value(forKey: "description") as! String
@@ -95,7 +97,7 @@ class MarvelRed: NSObject{
             
             crearHeroe(nombre: nombre, descripcion: descripcion, imagen: rutaCompleta)
         }
-        //store.saveContext()
+
 
     }
 

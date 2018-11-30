@@ -13,14 +13,10 @@ import UIKit
 class MarvelRed: NSObject{
     static var semaforo: DispatchGroup = DispatchGroup()
     //Funcion que nos genera una sesion de red a partir de una url a la que conectarse
-    class func crearSesionRed(url: String, limit:String, offset: String) -> (NSMutableURLRequest, URLSession, String) {
+    class func crearSesionRed(url: String, limit:String, offset: String) -> (NSMutableURLRequest, URLSession) {
         
         let request: NSMutableURLRequest
         let session = URLSession.shared
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MM-yyyy"
-        
-        let tiempoIni = formatter.string(from: Date())
         
         let APIKEY: String = "c0252ec5bc3ee9b2c6a0a26e2dfb306d"
         let PRIVKEY: String = "c124cdc74823164742598e641674842fa2de600c"
@@ -33,18 +29,18 @@ class MarvelRed: NSObject{
         
         request = NSMutableURLRequest(url: URL(string: urlFinal)!)
         
-        return (request, session, tiempoIni)
+        return (request, session)
     }
     
     class func llamadaPersonajes(limit: String, offset: String) -> Bool{
         
         var request: NSMutableURLRequest = NSMutableURLRequest()
         var session: URLSession = URLSession()
-        var timeLoad: String
+
         var retorno: Bool = true
         
-        (request,session,timeLoad) = crearSesionRed(url : "https://gateway.marvel.com/v1/public/characters", limit: limit, offset: offset)
-        
+        (request,session) = crearSesionRed(url : "https://gateway.marvel.com/v1/public/characters", limit: limit, offset: offset)
+
         semaforo.enter()
         let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in
 

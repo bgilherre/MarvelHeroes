@@ -10,7 +10,6 @@
 import Foundation
 import CoreData
 
-@objc(Heroe)
 public class Heroe: NSManagedObject {
 
 }

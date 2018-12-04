@@ -20,6 +20,7 @@
 		FCADE50321ADABEF002E4AA7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCADE50221ADABEF002E4AA7 /* CoreDataStack.swift */; };
 		FCADE50721ADADF0002E4AA7 /* Heroe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCADE50521ADADF0002E4AA7 /* Heroe+CoreDataClass.swift */; };
 		FCADE50821ADADF0002E4AA7 /* Heroe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCADE50621ADADF0002E4AA7 /* Heroe+CoreDataProperties.swift */; };
+		FCF906B121B52CE600BE3123 /* CharactersMarvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF906B021B52CE600BE3123 /* CharactersMarvel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FCADE50221ADABEF002E4AA7 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		FCADE50521ADADF0002E4AA7 /* Heroe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Heroe+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FCADE50621ADADF0002E4AA7 /* Heroe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Heroe+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FCF906B021B52CE600BE3123 /* CharactersMarvel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersMarvel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			children = (
 				FCADE50521ADADF0002E4AA7 /* Heroe+CoreDataClass.swift */,
 				FCADE50621ADADF0002E4AA7 /* Heroe+CoreDataProperties.swift */,
+				FCF906B021B52CE600BE3123 /* CharactersMarvel.swift */,
 			);
 			path = Modelo;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				FCADE4EE21ADA70B002E4AA7 /* MasterViewController.swift in Sources */,
 				FCADE50321ADABEF002E4AA7 /* CoreDataStack.swift in Sources */,
 				FCADE4F021ADA70B002E4AA7 /* DetailViewController.swift in Sources */,
+				FCF906B121B52CE600BE3123 /* CharactersMarvel.swift in Sources */,
 				FCADE50121ADAA28002E4AA7 /* HeroeTableViewCell.swift in Sources */,
 				FCADE50821ADADF0002E4AA7 /* Heroe+CoreDataProperties.swift in Sources */,
 			);

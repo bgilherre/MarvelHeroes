@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC1280DA21C26B3200E664E7 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1280D821C26B3100E664E7 /* Crashlytics.framework */; };
+		FC1280DB21C26B3200E664E7 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1280D921C26B3100E664E7 /* Fabric.framework */; };
 		FC45709F21B0010100BB9AA2 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC45709E21B0010100BB9AA2 /* StringExtension.swift */; };
 		FC47763621AE9D8100B571B4 /* MarvelRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC47763521AE9D8100B571B4 /* MarvelRed.swift */; };
 		FCADE4E921ADA70B002E4AA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCADE4E821ADA70B002E4AA7 /* AppDelegate.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC1280D821C26B3100E664E7 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		FC1280D921C26B3100E664E7 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		FC45709E21B0010100BB9AA2 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		FC47763521AE9D8100B571B4 /* MarvelRed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelRed.swift; sourceTree = "<group>"; };
 		FCADE4E521ADA70B002E4AA7 /* Heroes Marvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Heroes Marvel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC1280DA21C26B3200E664E7 /* Crashlytics.framework in Frameworks */,
+				FC1280DB21C26B3200E664E7 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +95,8 @@
 		FCADE4DC21ADA70B002E4AA7 = {
 			isa = PBXGroup;
 			children = (
+				FC1280D821C26B3100E664E7 /* Crashlytics.framework */,
+				FC1280D921C26B3100E664E7 /* Fabric.framework */,
 				FCADE4E721ADA70B002E4AA7 /* Heroes Marvel */,
 				FCADE4E621ADA70B002E4AA7 /* Products */,
 			);
@@ -149,6 +157,7 @@
 				FCADE4E121ADA70B002E4AA7 /* Sources */,
 				FCADE4E221ADA70B002E4AA7 /* Frameworks */,
 				FCADE4E321ADA70B002E4AA7 /* Resources */,
+				FC1280DC21C26C6900E664E7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -204,6 +213,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FC1280DC21C26C6900E664E7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PROJECT_DIR}/Fabric.framework/run\" b6233cbf3ad0c3e1c35cd828c8591a15e0f401e3 3ec15750e6fce8c34105ccc5ebe4475384ff5684e7de4c7b7d1074f276b24a0d\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FCADE4E121ADA70B002E4AA7 /* Sources */ = {
@@ -367,7 +396,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7AKBMT4K36;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Heroes Marvel/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -386,6 +420,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AKBMT4K36;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Heroes Marvel/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

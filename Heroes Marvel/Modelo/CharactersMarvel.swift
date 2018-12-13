@@ -27,13 +27,17 @@ class DataAPI: NSObject, Codable{
 
 class CharacterAPI: NSObject, Codable {
     enum CodingKeys: String, CodingKey {
-        //case id
+        case id
         case name
         case descriptionString = "description"
         case modified
-        //case thumbnail
+        case thumbnail
         case resourceURI
-        //case comics        
+        case comics
+        case series
+        case stories
+        case events
+        case urls
     }
     var id: Int32 = 0
     var name: String = ""

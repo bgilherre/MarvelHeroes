@@ -24,16 +24,18 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
+        DispatchQueue.global().async {
+            
+            
+            self.cargarHeroes()
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
-        DispatchQueue.global().async {
-            
-        
-            self.cargarHeroes()
-        }
+
     }
     
     func cargarHeroes(){

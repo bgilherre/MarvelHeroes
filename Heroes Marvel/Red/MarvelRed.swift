@@ -59,7 +59,7 @@ class MarvelRed: NSObject{
                     //Only with name, age, gender properties decoded from json as we have defined CodingKeys enum in Person class.
                     //while respuestaAPI == nil{
                    // }
-                    print(respuestaAPI?.data.results[2].name)
+	                    print(respuestaAPI?.data.results[2].name)
                     print(respuestaAPI?.code)
                     
 

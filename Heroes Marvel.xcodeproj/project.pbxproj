@@ -3,13 +3,60 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		FC1280DA21C26B3200E664E7 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1280D821C26B3100E664E7 /* Crashlytics.framework */; };
 		FC1280DB21C26B3200E664E7 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1280D921C26B3100E664E7 /* Fabric.framework */; };
+		FC41292221C8DEF30058453B /* Redbeard.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC41292021C8DEF30058453B /* Redbeard.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FC412A1421C8E4CC0058453B /* RBButtonCellView.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129E221C8E4CC0058453B /* RBButtonCellView.json */; };
+		FC412A1521C8E4CC0058453B /* RBSimpleCellView.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129E321C8E4CC0058453B /* RBSimpleCellView.json */; };
+		FC412A1621C8E4CC0058453B /* RBBaseCellView.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129E421C8E4CC0058453B /* RBBaseCellView.json */; };
+		FC412A1721C8E4CC0058453B /* form-common.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129E621C8E4CC0058453B /* form-common.json */; };
+		FC412A1821C8E4CC0058453B /* RBManagedFormInputToolbar.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129E721C8E4CC0058453B /* RBManagedFormInputToolbar.json */; };
+		FC412A1921C8E4CC0058453B /* RBManagedFormView.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129E821C8E4CC0058453B /* RBManagedFormView.json */; };
+		FC412A1A21C8E4CC0058453B /* alert-buttons.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129EA21C8E4CC0058453B /* alert-buttons.json */; };
+		FC412A1B21C8E4CC0058453B /* toolbar-buttons.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129EB21C8E4CC0058453B /* toolbar-buttons.json */; };
+		FC412A1C21C8E4CC0058453B /* fonts.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129EC21C8E4CC0058453B /* fonts.json */; };
+		FC412A1D21C8E4CC0058453B /* buttons.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129ED21C8E4CC0058453B /* buttons.json */; };
+		FC412A1E21C8E4CC0058453B /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129EE21C8E4CC0058453B /* colors.json */; };
+		FC412A1F21C8E4CC0058453B /* default.inc.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129EF21C8E4CC0058453B /* default.inc.json */; };
+		FC412A2021C8E4CC0058453B /* RBToastAlertView.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129F121C8E4CC0058453B /* RBToastAlertView.json */; };
+		FC412A2121C8E4CC0058453B /* RBFormAlertViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129F221C8E4CC0058453B /* RBFormAlertViewController.json */; };
+		FC412A2221C8E4CC0058453B /* RBAlertViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129F321C8E4CC0058453B /* RBAlertViewController.json */; };
+		FC412A2321C8E4CC0058453B /* RBPageViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129F521C8E4CC0058453B /* RBPageViewController.json */; };
+		FC412A2421C8E4CC0058453B /* RBSwitchField.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129F721C8E4CC0058453B /* RBSwitchField.json */; };
+		FC412A2521C8E4CC0058453B /* RBTextField.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129F821C8E4CC0058453B /* RBTextField.json */; };
+		FC412A2621C8E4CC0058453B /* RBPhotoField.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129F921C8E4CC0058453B /* RBPhotoField.json */; };
+		FC412A2721C8E4CC0058453B /* RBSliderField.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129FA21C8E4CC0058453B /* RBSliderField.json */; };
+		FC412A2821C8E4CC0058453B /* RBImageSelectionField.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129FB21C8E4CC0058453B /* RBImageSelectionField.json */; };
+		FC412A2921C8E4CC0058453B /* RBDateTimeField.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129FC21C8E4CC0058453B /* RBDateTimeField.json */; };
+		FC412A2A21C8E4CC0058453B /* RBListField.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129FD21C8E4CC0058453B /* RBListField.json */; };
+		FC412A2B21C8E4CC0058453B /* RBRatingField.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129FE21C8E4CC0058453B /* RBRatingField.json */; };
+		FC412A2C21C8E4CC0058453B /* RBTextViewField.json in Resources */ = {isa = PBXBuildFile; fileRef = FC4129FF21C8E4CC0058453B /* RBTextViewField.json */; };
+		FC412A2D21C8E4CC0058453B /* RBMultipleChoiceField.json in Resources */ = {isa = PBXBuildFile; fileRef = FC412A0021C8E4CC0058453B /* RBMultipleChoiceField.json */; };
+		FC412A2E21C8E4CC0058453B /* RBSlidingPageContainerView.json in Resources */ = {isa = PBXBuildFile; fileRef = FC412A0221C8E4CC0058453B /* RBSlidingPageContainerView.json */; };
+		FC412A2F21C8E4CC0058453B /* RBSearchContainerView.json in Resources */ = {isa = PBXBuildFile; fileRef = FC412A0321C8E4CC0058453B /* RBSearchContainerView.json */; };
+		FC412A3021C8E4CC0058453B /* RBTabbedPageContainerViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = FC412A0421C8E4CC0058453B /* RBTabbedPageContainerViewController.json */; };
+		FC412A3121C8E4CC0058453B /* RBToolbarView.json in Resources */ = {isa = PBXBuildFile; fileRef = FC412A0621C8E4CC0058453B /* RBToolbarView.json */; };
+		FC412A3221C8E4CC0058453B /* RBTooltipView.json in Resources */ = {isa = PBXBuildFile; fileRef = FC412A0721C8E4CC0058453B /* RBTooltipView.json */; };
+		FC412A3321C8E4CC0058453B /* RBBannerExtendView.json in Resources */ = {isa = PBXBuildFile; fileRef = FC412A0821C8E4CC0058453B /* RBBannerExtendView.json */; };
+		FC412A3421C8E4CC0058453B /* RBWebViewToolbarView.json in Resources */ = {isa = PBXBuildFile; fileRef = FC412A0921C8E4CC0058453B /* RBWebViewToolbarView.json */; };
+		FC412A3521C8E4CC0058453B /* RBRefreshExtendView.json in Resources */ = {isa = PBXBuildFile; fileRef = FC412A0A21C8E4CC0058453B /* RBRefreshExtendView.json */; };
+		FC412A3621C8E4CC0058453B /* RBButton.json in Resources */ = {isa = PBXBuildFile; fileRef = FC412A0B21C8E4CC0058453B /* RBButton.json */; };
+		FC412A3721C8E4CC0058453B /* RBActivityView.json in Resources */ = {isa = PBXBuildFile; fileRef = FC412A0C21C8E4CC0058453B /* RBActivityView.json */; };
+		FC412A3821C8E4CC0058453B /* RBMenuView.json in Resources */ = {isa = PBXBuildFile; fileRef = FC412A0D21C8E4CC0058453B /* RBMenuView.json */; };
+		FC412A3921C8E4CC0058453B /* RBNextPageExtendView.json in Resources */ = {isa = PBXBuildFile; fileRef = FC412A0E21C8E4CC0058453B /* RBNextPageExtendView.json */; };
+		FC412A3A21C8E4CC0058453B /* RBLabel.json in Resources */ = {isa = PBXBuildFile; fileRef = FC412A0F21C8E4CC0058453B /* RBLabel.json */; };
+		FC412A3B21C8E4CC0058453B /* RBToggleButton.json in Resources */ = {isa = PBXBuildFile; fileRef = FC412A1021C8E4CC0058453B /* RBToggleButton.json */; };
+		FC412A3C21C8E4CC0058453B /* material-design-palette.json in Resources */ = {isa = PBXBuildFile; fileRef = FC412A1221C8E4CC0058453B /* material-design-palette.json */; };
+		FC412A3D21C8E4CC0058453B /* material-design-palette.inc.json in Resources */ = {isa = PBXBuildFile; fileRef = FC412A1321C8E4CC0058453B /* material-design-palette.inc.json */; };
+		FC412A3F21C8E5240058453B /* theme.inc.json in Resources */ = {isa = PBXBuildFile; fileRef = FC412A3E21C8E5240058453B /* theme.inc.json */; };
+		FC43EE4521C9547F003544B8 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC43EE4321C9547D003544B8 /* Realm.framework */; };
+		FC43EE4621C9547F003544B8 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC43EE4421C9547F003544B8 /* RealmSwift.framework */; };
 		FC45709F21B0010100BB9AA2 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC45709E21B0010100BB9AA2 /* StringExtension.swift */; };
+		FC462BFC21C8021900679DC5 /* RedBeardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC462BFB21C8021900679DC5 /* RedBeardViewController.swift */; };
 		FC47763621AE9D8100B571B4 /* MarvelRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC47763521AE9D8100B571B4 /* MarvelRed.swift */; };
 		FCADE4E921ADA70B002E4AA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCADE4E821ADA70B002E4AA7 /* AppDelegate.swift */; };
 		FCADE4EC21ADA70B002E4AA7 /* Heroes_Marvel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCADE4EA21ADA70B002E4AA7 /* Heroes_Marvel.xcdatamodeld */; };
@@ -25,10 +72,71 @@
 		FCF906B121B52CE600BE3123 /* CharactersMarvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF906B021B52CE600BE3123 /* CharactersMarvel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FC41292321C8DEF30058453B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FC41292221C8DEF30058453B /* Redbeard.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		FC1280D821C26B3100E664E7 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		FC1280D921C26B3100E664E7 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		FC41292021C8DEF30058453B /* Redbeard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Redbeard.framework; sourceTree = "<group>"; };
+		FC4129E221C8E4CC0058453B /* RBButtonCellView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBButtonCellView.json; sourceTree = "<group>"; };
+		FC4129E321C8E4CC0058453B /* RBSimpleCellView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBSimpleCellView.json; sourceTree = "<group>"; };
+		FC4129E421C8E4CC0058453B /* RBBaseCellView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBBaseCellView.json; sourceTree = "<group>"; };
+		FC4129E621C8E4CC0058453B /* form-common.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "form-common.json"; sourceTree = "<group>"; };
+		FC4129E721C8E4CC0058453B /* RBManagedFormInputToolbar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBManagedFormInputToolbar.json; sourceTree = "<group>"; };
+		FC4129E821C8E4CC0058453B /* RBManagedFormView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBManagedFormView.json; sourceTree = "<group>"; };
+		FC4129EA21C8E4CC0058453B /* alert-buttons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "alert-buttons.json"; sourceTree = "<group>"; };
+		FC4129EB21C8E4CC0058453B /* toolbar-buttons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "toolbar-buttons.json"; sourceTree = "<group>"; };
+		FC4129EC21C8E4CC0058453B /* fonts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fonts.json; sourceTree = "<group>"; };
+		FC4129ED21C8E4CC0058453B /* buttons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = buttons.json; sourceTree = "<group>"; };
+		FC4129EE21C8E4CC0058453B /* colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = colors.json; sourceTree = "<group>"; };
+		FC4129EF21C8E4CC0058453B /* default.inc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = default.inc.json; sourceTree = "<group>"; };
+		FC4129F121C8E4CC0058453B /* RBToastAlertView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBToastAlertView.json; sourceTree = "<group>"; };
+		FC4129F221C8E4CC0058453B /* RBFormAlertViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBFormAlertViewController.json; sourceTree = "<group>"; };
+		FC4129F321C8E4CC0058453B /* RBAlertViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBAlertViewController.json; sourceTree = "<group>"; };
+		FC4129F521C8E4CC0058453B /* RBPageViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBPageViewController.json; sourceTree = "<group>"; };
+		FC4129F721C8E4CC0058453B /* RBSwitchField.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBSwitchField.json; sourceTree = "<group>"; };
+		FC4129F821C8E4CC0058453B /* RBTextField.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBTextField.json; sourceTree = "<group>"; };
+		FC4129F921C8E4CC0058453B /* RBPhotoField.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBPhotoField.json; sourceTree = "<group>"; };
+		FC4129FA21C8E4CC0058453B /* RBSliderField.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBSliderField.json; sourceTree = "<group>"; };
+		FC4129FB21C8E4CC0058453B /* RBImageSelectionField.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBImageSelectionField.json; sourceTree = "<group>"; };
+		FC4129FC21C8E4CC0058453B /* RBDateTimeField.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBDateTimeField.json; sourceTree = "<group>"; };
+		FC4129FD21C8E4CC0058453B /* RBListField.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBListField.json; sourceTree = "<group>"; };
+		FC4129FE21C8E4CC0058453B /* RBRatingField.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBRatingField.json; sourceTree = "<group>"; };
+		FC4129FF21C8E4CC0058453B /* RBTextViewField.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBTextViewField.json; sourceTree = "<group>"; };
+		FC412A0021C8E4CC0058453B /* RBMultipleChoiceField.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBMultipleChoiceField.json; sourceTree = "<group>"; };
+		FC412A0221C8E4CC0058453B /* RBSlidingPageContainerView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBSlidingPageContainerView.json; sourceTree = "<group>"; };
+		FC412A0321C8E4CC0058453B /* RBSearchContainerView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBSearchContainerView.json; sourceTree = "<group>"; };
+		FC412A0421C8E4CC0058453B /* RBTabbedPageContainerViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBTabbedPageContainerViewController.json; sourceTree = "<group>"; };
+		FC412A0621C8E4CC0058453B /* RBToolbarView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBToolbarView.json; sourceTree = "<group>"; };
+		FC412A0721C8E4CC0058453B /* RBTooltipView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBTooltipView.json; sourceTree = "<group>"; };
+		FC412A0821C8E4CC0058453B /* RBBannerExtendView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBBannerExtendView.json; sourceTree = "<group>"; };
+		FC412A0921C8E4CC0058453B /* RBWebViewToolbarView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBWebViewToolbarView.json; sourceTree = "<group>"; };
+		FC412A0A21C8E4CC0058453B /* RBRefreshExtendView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBRefreshExtendView.json; sourceTree = "<group>"; };
+		FC412A0B21C8E4CC0058453B /* RBButton.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBButton.json; sourceTree = "<group>"; };
+		FC412A0C21C8E4CC0058453B /* RBActivityView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBActivityView.json; sourceTree = "<group>"; };
+		FC412A0D21C8E4CC0058453B /* RBMenuView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBMenuView.json; sourceTree = "<group>"; };
+		FC412A0E21C8E4CC0058453B /* RBNextPageExtendView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBNextPageExtendView.json; sourceTree = "<group>"; };
+		FC412A0F21C8E4CC0058453B /* RBLabel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBLabel.json; sourceTree = "<group>"; };
+		FC412A1021C8E4CC0058453B /* RBToggleButton.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RBToggleButton.json; sourceTree = "<group>"; };
+		FC412A1221C8E4CC0058453B /* material-design-palette.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "material-design-palette.json"; sourceTree = "<group>"; };
+		FC412A1321C8E4CC0058453B /* material-design-palette.inc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "material-design-palette.inc.json"; sourceTree = "<group>"; };
+		FC412A3E21C8E5240058453B /* theme.inc.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = theme.inc.json; sourceTree = "<group>"; };
+		FC43EE4321C9547D003544B8 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		FC43EE4421C9547F003544B8 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		FC45709E21B0010100BB9AA2 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		FC462BFB21C8021900679DC5 /* RedBeardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedBeardViewController.swift; sourceTree = "<group>"; };
 		FC47763521AE9D8100B571B4 /* MarvelRed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelRed.swift; sourceTree = "<group>"; };
 		FCADE4E521ADA70B002E4AA7 /* Heroes Marvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Heroes Marvel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCADE4E821ADA70B002E4AA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +159,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC43EE4521C9547F003544B8 /* Realm.framework in Frameworks */,
 				FC1280DA21C26B3200E664E7 /* Crashlytics.framework in Frameworks */,
+				FC43EE4621C9547F003544B8 /* RealmSwift.framework in Frameworks */,
 				FC1280DB21C26B3200E664E7 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +169,128 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC4129E021C8E4CC0058453B /* default */ = {
+			isa = PBXGroup;
+			children = (
+				FC4129E121C8E4CC0058453B /* cells */,
+				FC4129E521C8E4CC0058453B /* forms */,
+				FC4129E921C8E4CC0058453B /* core */,
+				FC4129EF21C8E4CC0058453B /* default.inc.json */,
+				FC4129F021C8E4CC0058453B /* alerts */,
+				FC4129F421C8E4CC0058453B /* viewcontrollers */,
+				FC4129F621C8E4CC0058453B /* fields */,
+				FC412A0121C8E4CC0058453B /* containers */,
+				FC412A0521C8E4CC0058453B /* views */,
+				FC412A1121C8E4CC0058453B /* palette */,
+			);
+			name = default;
+			path = ../../../../Downloads/v1.2/default;
+			sourceTree = "<group>";
+		};
+		FC4129E121C8E4CC0058453B /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				FC4129E221C8E4CC0058453B /* RBButtonCellView.json */,
+				FC4129E321C8E4CC0058453B /* RBSimpleCellView.json */,
+				FC4129E421C8E4CC0058453B /* RBBaseCellView.json */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		FC4129E521C8E4CC0058453B /* forms */ = {
+			isa = PBXGroup;
+			children = (
+				FC4129E621C8E4CC0058453B /* form-common.json */,
+				FC4129E721C8E4CC0058453B /* RBManagedFormInputToolbar.json */,
+				FC4129E821C8E4CC0058453B /* RBManagedFormView.json */,
+			);
+			path = forms;
+			sourceTree = "<group>";
+		};
+		FC4129E921C8E4CC0058453B /* core */ = {
+			isa = PBXGroup;
+			children = (
+				FC4129EA21C8E4CC0058453B /* alert-buttons.json */,
+				FC4129EB21C8E4CC0058453B /* toolbar-buttons.json */,
+				FC4129EC21C8E4CC0058453B /* fonts.json */,
+				FC4129ED21C8E4CC0058453B /* buttons.json */,
+				FC4129EE21C8E4CC0058453B /* colors.json */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		FC4129F021C8E4CC0058453B /* alerts */ = {
+			isa = PBXGroup;
+			children = (
+				FC4129F121C8E4CC0058453B /* RBToastAlertView.json */,
+				FC4129F221C8E4CC0058453B /* RBFormAlertViewController.json */,
+				FC4129F321C8E4CC0058453B /* RBAlertViewController.json */,
+			);
+			path = alerts;
+			sourceTree = "<group>";
+		};
+		FC4129F421C8E4CC0058453B /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				FC4129F521C8E4CC0058453B /* RBPageViewController.json */,
+			);
+			path = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		FC4129F621C8E4CC0058453B /* fields */ = {
+			isa = PBXGroup;
+			children = (
+				FC4129F721C8E4CC0058453B /* RBSwitchField.json */,
+				FC4129F821C8E4CC0058453B /* RBTextField.json */,
+				FC4129F921C8E4CC0058453B /* RBPhotoField.json */,
+				FC4129FA21C8E4CC0058453B /* RBSliderField.json */,
+				FC4129FB21C8E4CC0058453B /* RBImageSelectionField.json */,
+				FC4129FC21C8E4CC0058453B /* RBDateTimeField.json */,
+				FC4129FD21C8E4CC0058453B /* RBListField.json */,
+				FC4129FE21C8E4CC0058453B /* RBRatingField.json */,
+				FC4129FF21C8E4CC0058453B /* RBTextViewField.json */,
+				FC412A0021C8E4CC0058453B /* RBMultipleChoiceField.json */,
+			);
+			path = fields;
+			sourceTree = "<group>";
+		};
+		FC412A0121C8E4CC0058453B /* containers */ = {
+			isa = PBXGroup;
+			children = (
+				FC412A0221C8E4CC0058453B /* RBSlidingPageContainerView.json */,
+				FC412A0321C8E4CC0058453B /* RBSearchContainerView.json */,
+				FC412A0421C8E4CC0058453B /* RBTabbedPageContainerViewController.json */,
+			);
+			path = containers;
+			sourceTree = "<group>";
+		};
+		FC412A0521C8E4CC0058453B /* views */ = {
+			isa = PBXGroup;
+			children = (
+				FC412A0621C8E4CC0058453B /* RBToolbarView.json */,
+				FC412A0721C8E4CC0058453B /* RBTooltipView.json */,
+				FC412A0821C8E4CC0058453B /* RBBannerExtendView.json */,
+				FC412A0921C8E4CC0058453B /* RBWebViewToolbarView.json */,
+				FC412A0A21C8E4CC0058453B /* RBRefreshExtendView.json */,
+				FC412A0B21C8E4CC0058453B /* RBButton.json */,
+				FC412A0C21C8E4CC0058453B /* RBActivityView.json */,
+				FC412A0D21C8E4CC0058453B /* RBMenuView.json */,
+				FC412A0E21C8E4CC0058453B /* RBNextPageExtendView.json */,
+				FC412A0F21C8E4CC0058453B /* RBLabel.json */,
+				FC412A1021C8E4CC0058453B /* RBToggleButton.json */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		FC412A1121C8E4CC0058453B /* palette */ = {
+			isa = PBXGroup;
+			children = (
+				FC412A1221C8E4CC0058453B /* material-design-palette.json */,
+				FC412A1321C8E4CC0058453B /* material-design-palette.inc.json */,
+			);
+			path = palette;
+			sourceTree = "<group>";
+		};
 		FC4570A021B001D300BB9AA2 /* ModeloDatos */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +327,9 @@
 		FCADE4DC21ADA70B002E4AA7 = {
 			isa = PBXGroup;
 			children = (
+				FC43EE4321C9547D003544B8 /* Realm.framework */,
+				FC43EE4421C9547F003544B8 /* RealmSwift.framework */,
+				FC41292021C8DEF30058453B /* Redbeard.framework */,
 				FC1280D821C26B3100E664E7 /* Crashlytics.framework */,
 				FC1280D921C26B3100E664E7 /* Fabric.framework */,
 				FCADE4E721ADA70B002E4AA7 /* Heroes Marvel */,
@@ -113,6 +348,7 @@
 		FCADE4E721ADA70B002E4AA7 /* Heroes Marvel */ = {
 			isa = PBXGroup;
 			children = (
+				FC4129E021C8E4CC0058453B /* default */,
 				FC4570A221B0028C00BB9AA2 /* Util */,
 				FC4570A121B0027800BB9AA2 /* Red */,
 				FC4570A021B001D300BB9AA2 /* ModeloDatos */,
@@ -123,6 +359,7 @@
 				FCADE4F421ADA70F002E4AA7 /* Assets.xcassets */,
 				FCADE4F921ADA70F002E4AA7 /* Info.plist */,
 				FCADE50221ADABEF002E4AA7 /* CoreDataStack.swift */,
+				FC412A3E21C8E5240058453B /* theme.inc.json */,
 			);
 			path = "Heroes Marvel";
 			sourceTree = "<group>";
@@ -140,6 +377,7 @@
 		FCADE50421ADADBF002E4AA7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FC462BFB21C8021900679DC5 /* RedBeardViewController.swift */,
 				FCADE4ED21ADA70B002E4AA7 /* MasterViewController.swift */,
 				FCADE50021ADAA28002E4AA7 /* HeroeTableViewCell.swift */,
 				FCADE4EF21ADA70B002E4AA7 /* DetailViewController.swift */,
@@ -157,7 +395,9 @@
 				FCADE4E121ADA70B002E4AA7 /* Sources */,
 				FCADE4E221ADA70B002E4AA7 /* Frameworks */,
 				FCADE4E321ADA70B002E4AA7 /* Resources */,
-				FC1280DC21C26C6900E664E7 /* ShellScript */,
+				FC1280DC21C26C6900E664E7 /* Run Script */,
+				FC41291F21C8DE840058453B /* ShellScript */,
+				FC41292321C8DEF30058453B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,7 +424,7 @@
 				};
 			};
 			buildConfigurationList = FCADE4E021ADA70B002E4AA7 /* Build configuration list for PBXProject "Heroes Marvel" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -206,16 +446,77 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC412A3B21C8E4CC0058453B /* RBToggleButton.json in Resources */,
+				FC412A3421C8E4CC0058453B /* RBWebViewToolbarView.json in Resources */,
+				FC412A2C21C8E4CC0058453B /* RBTextViewField.json in Resources */,
+				FC412A2421C8E4CC0058453B /* RBSwitchField.json in Resources */,
+				FC412A3821C8E4CC0058453B /* RBMenuView.json in Resources */,
+				FC412A1C21C8E4CC0058453B /* fonts.json in Resources */,
+				FC412A3D21C8E4CC0058453B /* material-design-palette.inc.json in Resources */,
+				FC412A2521C8E4CC0058453B /* RBTextField.json in Resources */,
+				FC412A2821C8E4CC0058453B /* RBImageSelectionField.json in Resources */,
+				FC412A3521C8E4CC0058453B /* RBRefreshExtendView.json in Resources */,
+				FC412A3021C8E4CC0058453B /* RBTabbedPageContainerViewController.json in Resources */,
+				FC412A2B21C8E4CC0058453B /* RBRatingField.json in Resources */,
+				FC412A1A21C8E4CC0058453B /* alert-buttons.json in Resources */,
+				FC412A1521C8E4CC0058453B /* RBSimpleCellView.json in Resources */,
+				FC412A3321C8E4CC0058453B /* RBBannerExtendView.json in Resources */,
+				FC412A1721C8E4CC0058453B /* form-common.json in Resources */,
+				FC412A1621C8E4CC0058453B /* RBBaseCellView.json in Resources */,
+				FC412A2E21C8E4CC0058453B /* RBSlidingPageContainerView.json in Resources */,
+				FC412A2D21C8E4CC0058453B /* RBMultipleChoiceField.json in Resources */,
+				FC412A2A21C8E4CC0058453B /* RBListField.json in Resources */,
+				FC412A3221C8E4CC0058453B /* RBTooltipView.json in Resources */,
+				FC412A1D21C8E4CC0058453B /* buttons.json in Resources */,
+				FC412A2F21C8E4CC0058453B /* RBSearchContainerView.json in Resources */,
+				FC412A3721C8E4CC0058453B /* RBActivityView.json in Resources */,
+				FC412A2921C8E4CC0058453B /* RBDateTimeField.json in Resources */,
+				FC412A1421C8E4CC0058453B /* RBButtonCellView.json in Resources */,
+				FC412A3921C8E4CC0058453B /* RBNextPageExtendView.json in Resources */,
+				FC412A3C21C8E4CC0058453B /* material-design-palette.json in Resources */,
+				FC412A2321C8E4CC0058453B /* RBPageViewController.json in Resources */,
+				FC412A1E21C8E4CC0058453B /* colors.json in Resources */,
+				FC412A1B21C8E4CC0058453B /* toolbar-buttons.json in Resources */,
+				FC412A3F21C8E5240058453B /* theme.inc.json in Resources */,
 				FCADE4F821ADA70F002E4AA7 /* LaunchScreen.storyboard in Resources */,
 				FCADE4F521ADA70F002E4AA7 /* Assets.xcassets in Resources */,
+				FC412A2121C8E4CC0058453B /* RBFormAlertViewController.json in Resources */,
+				FC412A3121C8E4CC0058453B /* RBToolbarView.json in Resources */,
+				FC412A2721C8E4CC0058453B /* RBSliderField.json in Resources */,
+				FC412A1821C8E4CC0058453B /* RBManagedFormInputToolbar.json in Resources */,
+				FC412A3A21C8E4CC0058453B /* RBLabel.json in Resources */,
+				FC412A3621C8E4CC0058453B /* RBButton.json in Resources */,
+				FC412A1921C8E4CC0058453B /* RBManagedFormView.json in Resources */,
+				FC412A1F21C8E4CC0058453B /* default.inc.json in Resources */,
 				FCADE4F321ADA70B002E4AA7 /* Main.storyboard in Resources */,
+				FC412A2621C8E4CC0058453B /* RBPhotoField.json in Resources */,
+				FC412A2021C8E4CC0058453B /* RBToastAlertView.json in Resources */,
+				FC412A2221C8E4CC0058453B /* RBAlertViewController.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		FC1280DC21C26C6900E664E7 /* ShellScript */ = {
+		FC1280DC21C26C6900E664E7 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PROJECT_DIR}/Fabric.framework/run\" b6233cbf3ad0c3e1c35cd828c8591a15e0f401e3 3ec15750e6fce8c34105ccc5ebe4475384ff5684e7de4c7b7d1074f276b24a0d\n";
+		};
+		FC41291F21C8DE840058453B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -230,7 +531,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PROJECT_DIR}/Fabric.framework/run\" b6233cbf3ad0c3e1c35cd828c8591a15e0f401e3 3ec15750e6fce8c34105ccc5ebe4475384ff5684e7de4c7b7d1074f276b24a0d\n";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -246,6 +548,7 @@
 				FC47763621AE9D8100B571B4 /* MarvelRed.swift in Sources */,
 				FCADE4EE21ADA70B002E4AA7 /* MasterViewController.swift in Sources */,
 				FCADE50321ADABEF002E4AA7 /* CoreDataStack.swift in Sources */,
+				FC462BFC21C8021900679DC5 /* RedBeardViewController.swift in Sources */,
 				FCADE4F021ADA70B002E4AA7 /* DetailViewController.swift in Sources */,
 				FCF906B121B52CE600BE3123 /* CharactersMarvel.swift in Sources */,
 				FCADE50121ADAA28002E4AA7 /* HeroeTableViewCell.swift in Sources */,
@@ -403,6 +706,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Heroes Marvel/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -425,6 +729,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Heroes Marvel/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

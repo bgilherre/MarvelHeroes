@@ -168,11 +168,47 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Heroes" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="Heroes" id="Zdf-7t-Un8">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="lmK-kg-EAt">
+                            <connections>
+                                <segue destination="ZKu-6Y-Bcu" kind="show" id="nRg-kp-wi3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="708" y="-630.13493253373315"/>
+        </scene>
+        <!--Red Beard View Controller-->
+        <scene sceneID="f7X-ly-X1g">
+            <objects>
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="ZKu-6Y-Bcu" customClass="RedBeardViewController" customModule="Heroes_Marvel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4ok-fx-7oi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8O-vu-Gkn" customClass="RBManagedFormView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fW3-Ze-RbS" firstAttribute="bottom" secondItem="a8O-vu-Gkn" secondAttribute="bottom" id="JFN-0U-nEc"/>
+                            <constraint firstItem="a8O-vu-Gkn" firstAttribute="leading" secondItem="fW3-Ze-RbS" secondAttribute="leading" id="LaC-sc-RnS"/>
+                            <constraint firstItem="a8O-vu-Gkn" firstAttribute="top" secondItem="fW3-Ze-RbS" secondAttribute="top" id="PBj-gx-Q5W"/>
+                            <constraint firstItem="fW3-Ze-RbS" firstAttribute="trailing" secondItem="a8O-vu-Gkn" secondAttribute="trailing" id="teI-a3-5Iy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fW3-Ze-RbS"/>
+                    </view>
+                    <connections>
+                        <outlet property="formView" destination="a8O-vu-Gkn" id="3Us-1e-dZb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JaZ-SU-pdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1747" y="-630"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">

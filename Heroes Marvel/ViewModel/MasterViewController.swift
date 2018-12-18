@@ -27,7 +27,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         DispatchQueue.global().async {
             
-            
+            UserDefaults.standard.setValue(true, forKey: "carga")
             self.cargarHeroes()
         }
     }
